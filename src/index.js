@@ -1,17 +1,74 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+//import UserForm from './pages/User/userForm'
+import { createBrowserRouter, RouterProvider, Route } from 'react-router-dom';
+import TatuadorForm from './pages/TatuadorForm/tatuadorForm';
+//import UserList from './pages/User/userList';
+import TatuadorList from './pages/TatuadorList/tatuadorList';
+import CategoriaInsert from './pages/CategoriasList/categoriaInsert';
+import OrcamentoNew from './pages/Orcamento/orcamentoNew';
+import TatuadorPage from './pages/TatuadorPage/tatuadorPage';
+import CategoriaList from './pages/Categorias/categoriaList';
+import CategoriaSingle from './pages/CategoriaSingle/categoriaSingle';
+import {disableReactDevTools} from '@fvilers/disable-react-devtools';
+
+if(process.env.NODE_ENV === 'production') disableReactDevTools();
+
+const router = createBrowserRouter([
+    {
+        path:"/",
+        element:<App/>,
+    },
+    /*
+    {
+        path:"/userform",
+        element:<UserForm/>,
+    },
+    {
+        path:"/userlist",
+        element:<UserList/>,
+    },
+    */
+    {
+        path:"/tatuadorform",
+        element:<TatuadorForm/>,
+    },
+    {
+        path:"/tatuadorlist",
+        element:<TatuadorList/>,
+    },
+    {
+        path:"/categoria/insert",
+        element:<CategoriaInsert/>,
+    },
+    {
+        path:"/orcamento",
+        element:<OrcamentoNew/>,
+    },
+    {
+        path:"/tatuador",
+        element:<TatuadorPage/>,
+    },
+    {
+        path:"/categorialist",
+        element:<CategoriaList/>,
+    },
+    {
+        path:"/categoria/:categoriaName",
+        element:<CategoriaSingle/>,
+    },
+    {
+        path:"/tatuador/:tatuadorName",
+        element:<TatuadorPage/>,
+    },
+
+
+
+]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    <RouterProvider router={router}/>,
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
