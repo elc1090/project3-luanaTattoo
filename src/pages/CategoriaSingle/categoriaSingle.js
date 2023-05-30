@@ -2,7 +2,9 @@ import React,{useState,useEffect} from 'react';
 import { useParams } from 'react-router-dom';
 import './categoriaSingle.css';
 import Axios from 'axios';
-import NavBar from '../../components/NavBar2'
+import NavBar from '../../components/NavBar2';
+import { Link } from 'react-router-dom';
+
 
 function CategoriaSingle() {
     const params = useParams();
@@ -12,8 +14,10 @@ function CategoriaSingle() {
 
 //<CardColumn tatuadorList />    
 //buscar a lista de tatuadores q estao nessa categoria
+
     useEffect(()=>{
-        Axios.get("http://localhost:3001/categoria",{params:{categoriaName:categoriaName}}).then((response)=>{
+        Axios.get("https://tattomarket-api.onrender.com/categoria",{params:{categoriaName:categoriaName}}).then((response)=>{
+        //Axios.get("http://localhost:3001/categoria",{params:{categoriaName:categoriaName}}).then((response)=>{
             setTatuadorList(response.data);
         })
     },[]);
@@ -44,6 +48,7 @@ function Card({title,img,type}) {
       <div className={`card ${type}`}>
         <h2>{title}</h2>
         <img src={img} className='card__image'></img>
+        <Link to={`/tatuador/${title}`}><button>View</button></Link>
       </div>
     );
 }

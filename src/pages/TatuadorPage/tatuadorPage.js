@@ -12,9 +12,10 @@ const TatuadorPage = ()=>{
     const tatuadorName = params.tatuadorName;
 
     const[tatuador,setTatuador] = useState([]);
-
     useEffect(()=>{
-        Axios.get("http://localhost:3001/tatuador",{params:{tatuadorName:tatuadorName}}).then((response)=>{
+        Axios.get("https://tattomarket-api.onrender.com/tatuador",{params:{tatuadorName:tatuadorName}}).then((response)=>{
+
+        //Axios.get("http://localhost:3001/tatuador",{params:{tatuadorName:tatuadorName}}).then((response)=>{
             setTatuador(response.data);
         })
     },[]);
@@ -26,7 +27,7 @@ const TatuadorPage = ()=>{
                  <div key={key}>
                         <div class="row py-5 px-4 "> 
                             <div class="col-md-5 mx-auto"> 
-                            <div class="shadow rounded overflow-hidden"> 
+                            <div class="bg-white shadow rounded overflow-hidden"> 
                                 <div class="px-4 pt-0 pb-1 cover"> 
                                     <div class="media align-items-end profile-head "> 
                                         <div class="profile mr-3 ">

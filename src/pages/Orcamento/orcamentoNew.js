@@ -14,7 +14,8 @@ const OrcamentoNew = ()=>{
 
 
     const handleSubmit = (event) =>{
-        Axios.post("http://localhost:3001/orcamento",{name:name,tamanho:tamanho,cor:cor,local:local});
+        Axios.post("https://tattomarket-api.onrender.com/orcamento",{name:name,tamanho:tamanho,cor:cor,local:local});
+        //Axios.post("http://localhost:3001/orcamento",{name:name,tamanho:tamanho,cor:cor,local:local});
     }
 
 

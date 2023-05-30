@@ -76,10 +76,10 @@ function Card({title,img,type}) {
 
 function CardColumn() {
     const [tatuadorList,setTatuadorList] = useState([]);
-
-
+    
     useEffect(()=>{
-        Axios.get("http://localhost:3001/tatuadorlist").then((response)=>{
+        Axios.get("https://tattomarket-api.onrender.com/tatuadorlist").then((response)=>{
+        //Axios.get("http://localhost:3001/tatuadorlist").then((response)=>{
             setTatuadorList(response.data);
         })
     },[]);

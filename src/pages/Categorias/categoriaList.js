@@ -21,9 +21,11 @@ function Card({title,img,type}) {
 function CardRow() {
     const [categoriaList,setCategoriaList] = useState([]);
 
-
+    
     useEffect(()=>{
-        Axios.get("http://localhost:3001/categorialist").then((response)=>{
+        Axios.get("https://tattomarket-api.onrender.com/categorialist").then((response)=>{
+
+        //Axios.get("http://localhost:3001/categorialist").then((response)=>{
             setCategoriaList(response.data);
         })
     },[]);

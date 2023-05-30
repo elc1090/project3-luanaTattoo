@@ -10,9 +10,10 @@ const CategoriaInsert = ()=>{
     const[name,setName] = useState('');
     const[img,setImg] = useState('');
 
-
+    
     const handleSubmit = (event) =>{
-        Axios.post("http://localhost:3001/categoria/insert",{name:name,img:img});
+        Axios.post("https://tattomarket-api.onrender.com/categoria/insert",{name:name,img:img});
+        //Axios.post("http://localhost:3001/categoria/insert",{name:name,img:img});
     }
 
     return (<>
