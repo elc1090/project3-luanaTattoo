@@ -7,9 +7,9 @@ const UserModel = require("./models/Usuario");
 const TatuadorModel = require("./models/Tatuador");
 const OrcamentoModel = require("./models/Orcamento");
 const CategoriaModel = require("./models/Categoria");
-import { env } from 'node:process';
 
-require('dotenv').config({path: __dirname + '/.env'})
+require('dotenv').config();
+
 app.use(cors());
 
 app.use(express.json());
@@ -221,9 +221,9 @@ app.get('/tatuador', async(req,res)=>{
 });
 
 
-const PORT = process.env.PORT || 80;
-
-
-app.listen(PORT,()=>{
-    console.log('server runnig');
+const PORT = process.env.PORT || 3001;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
 });
+
+
