@@ -17,13 +17,13 @@ Luana Ferreira Oliveira
 
 #### Tecnologias
 
--Para o frontend usei reactjs, nao esta da maneira que gostaria, mas como eh minha primeira experiencia pretendo melhorar para o proximo projeto
+- Para o frontend usei reactjs, nao esta da maneira que gostaria, mas como eh minha primeira experiencia pretendo melhorar para o proximo projeto
 
--Para o backend usei o nodejs, com o express e nodemon.
+- Para o backend usei o nodejs, com o express e nodemon.
 
--Para a persistencia de dados, utilizei o mongodb junto com o atlas para armazenar em nuvem.
+- Para a persistencia de dados, utilizei o mongodb junto com o atlas para armazenar em nuvem.
 
--Para modelar o frontend utilizei o Figma
+- Para modelar o frontend utilizei o Figma
 
 #### Ambiente de desenvolvimento
 
