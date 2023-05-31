@@ -6,58 +6,6 @@ import { Link } from 'react-router-dom';
 
 
 
-/*
-function Card(props){
-    return(
-        <div className="card">
-            <div className="cad__body">
-                <h2 className='card__title'> {props.title}</h2>
-                <p className='card__description'>{props.description}</p>
-            </div>
-        </div>
-
-    );
-}
-
-
-
-function TatuadorList (){
-    //tenho q ver como pegar o parametro do path do html, dai eu pego o id e aparece a lista , fazer pesquisar o tatuador pelo id
-
-    const [tatuadorList,setTatuadorList] = useState([]);
-
-
-    useEffect(()=>{
-        Axios.get("http://localhost:3001/tatuadorlist").then((response)=>{
-            setTatuadorList(response.data);
-        })
-    },[]);
-
-
-   return (<>
-   <Navbar/>
-    <div className='title-body'>
-        <label className='label-title'>Tatuadores</label>
-    </div>
-    <div className='wrapper'>
-        
-        {tatuadorList.map((val,key)=>{
-            return( <div key={key}>
-            <Card
-                    title={val.name}
-                    description="Idade: ${val.age}  Email: ${val.email}"
-                />
-            </div>);
-        })}
-    </div>
-
-    </>);
-  
-}
-
-export default TatuadorList;
-
-*/
 
 function Card({title,img,type}) {
     return (
@@ -79,8 +27,8 @@ function CardColumn() {
     const [tatuadorList,setTatuadorList] = useState([]);
     
     useEffect(()=>{
-        //Axios.get("https://tattomarket-api.onrender.com/tatuadorlist").then((response)=>{
-        Axios.get("http://localhost:3001/tatuadorlist").then((response)=>{
+        Axios.get("https://tattomarket-api.onrender.com/tatuadorlist").then((response)=>{
+        //Axios.get("http://localhost:3001/tatuadorlist").then((response)=>{
             setTatuadorList(response.data);
         })
     },[]);
@@ -96,12 +44,7 @@ function CardColumn() {
 }
   
 function TatuadorList() {
-   /* 
-   <div className='novoTatuador-body'>
-            <label className='label-novoTatuador'>+ Novo Tatuador</label>
-    </div>
-   */
-  
+   
     return (
       <div>
         <NavBar/>

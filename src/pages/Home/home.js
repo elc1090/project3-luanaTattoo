@@ -11,28 +11,7 @@ const Home = ()=>{
 
     const [tatuadorList,setTatuadorList] = useState([]);
 
-    /*
-     <div className='home-wrapper'>
-          <div className='categoria-body-home'>
-            <label className='label-categorias-home'>Categorias</label>
-          </div>
-          <CardRow />
-          <div className='categoria-body-home'>
-            <label className='label-categorias-home'>Tatuadores</label>
-          </div>
-          <CardColumn />
-      </div>
-
-      <div className='home-titulos-container'>
-      <div className='home-categoria-body-home'>
-          <label className='label-categorias-home'>Categorias</label>
-        </div>
-        <div className='home-categoria-body-home'>
-          <label className='label-categorias-home'>Tatuadores</label>
-      </div>
-    </div>
-    */
-
+    
 
     return (<>
     <NavBar/>
