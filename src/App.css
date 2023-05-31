@@ -1,21 +1,21 @@
 
 *{
-  background-color: #4D0AA4 ;
+  background-color: #EDF2F4 ;
 
 }
 
 
 body{
-  background-color: #4D0AA4 !important;
+  background-color: #EDF2F4 !important;
 
 }
 
 .App {
-  background-color: #4D0AA4;
+  background-color: #EDF2F4;
   text-align: left;
   display:flex;
   flex-direction:column;
-  justify-content: left;
+  justify-items: left;
   align-items: left;
 }
 

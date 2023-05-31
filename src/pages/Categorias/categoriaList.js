@@ -8,11 +8,12 @@ import { Link } from 'react-router-dom';
 function Card({title,img,type}) {
     return (
       <div className='col-3'>
-        <div className={`card ${type}`}>
-          <h2>{title}</h2>
-          <img src={img} className='card__image'></img>
-          <Link to={`/categoria/${title}`}><button >View</button></Link>
-        </div>
+        <Link to={`/categoria/${title}`} className='link-card'>
+          <div className={`card ${type}`}>
+            <h2 className='title-card-categoriaList'>{title}</h2>
+            <img src={img} className='card__image'></img>
+          </div>
+        </Link>
       </div>
 
     );
@@ -23,9 +24,9 @@ function CardRow() {
 
     
     useEffect(()=>{
-        Axios.get("https://tattomarket-api.onrender.com/categorialist").then((response)=>{
+        //Axios.get("https://tattomarket-api.onrender.com/categorialist").then((response)=>{
 
-        //Axios.get("http://localhost:3001/categorialist").then((response)=>{
+        Axios.get("http://localhost:3001/categorialist").then((response)=>{
             setCategoriaList(response.data);
         })
     },[]);

@@ -62,11 +62,12 @@ export default TatuadorList;
 function Card({title,img,type}) {
     return (
     <div className='col-4'>
-        <div className={`card ${type}`}>
-            <h2>{title}</h2>
-            <img src={img} className='card__image'></img>
-            <Link to={`/tatuador/${title}`}><button  >View</button></Link>
-        </div>
+        <Link to={`/tatuador/${title}`} className='link-card'>
+            <div className={`card ${type}`}>
+                <h2>{title}</h2>
+                <img src={img} className='card__image'></img>
+            </div>
+        </Link>
     </div>
 
     );
@@ -78,8 +79,8 @@ function CardColumn() {
     const [tatuadorList,setTatuadorList] = useState([]);
     
     useEffect(()=>{
-        Axios.get("https://tattomarket-api.onrender.com/tatuadorlist").then((response)=>{
-        //Axios.get("http://localhost:3001/tatuadorlist").then((response)=>{
+        //Axios.get("https://tattomarket-api.onrender.com/tatuadorlist").then((response)=>{
+        Axios.get("http://localhost:3001/tatuadorlist").then((response)=>{
             setTatuadorList(response.data);
         })
     },[]);

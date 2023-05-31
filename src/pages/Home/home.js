@@ -11,21 +11,42 @@ const Home = ()=>{
 
     const [tatuadorList,setTatuadorList] = useState([]);
 
-
-    return (<>
-        
-      <div className='home-wrapper'>
+    /*
+     <div className='home-wrapper'>
           <div className='categoria-body-home'>
             <label className='label-categorias-home'>Categorias</label>
           </div>
-            <CardRow />
+          <CardRow />
           <div className='categoria-body-home'>
             <label className='label-categorias-home'>Tatuadores</label>
           </div>
-            <CardColumn />
+          <CardColumn />
       </div>
- 
-     
+
+      <div className='home-titulos-container'>
+      <div className='home-categoria-body-home'>
+          <label className='label-categorias-home'>Categorias</label>
+        </div>
+        <div className='home-categoria-body-home'>
+          <label className='label-categorias-home'>Tatuadores</label>
+      </div>
+    </div>
+    */
+
+
+    return (<>
+    <NavBar/>
+    <div className='home-wrapper'>
+          <div className='categoria-body-home'>
+            <label className='label-categorias-home'>Categorias</label>
+          </div>
+          <CardRow />
+          <div className='categoria-body-home'>
+            <label className='label-categorias-home'>Tatuadores</label>
+          </div>
+          <CardColumn />
+      </div>
+
     </>);
 
 
@@ -37,15 +58,14 @@ const Home = ()=>{
 
 function Card({title,img,type,typeCard}) {
 
-  return (
-    <div className='col-3'>
-    <div className={`card ${type}`}>
-      <h2 className='title-home-card'>{title}</h2>
-      <img src={img} className='card__image'></img>
-      <Link to={`/${typeCard}/${title}`}><button>View</button></Link>
-    </div>
-    </div>
 
+  return (
+    <Link to={`/${typeCard}/${title}`} className='link-card'>
+      <div className={`card ${type}-home`}>
+        <h2 className='title-home-card'>{title}</h2>
+        <img src={img} className='card__image'></img>
+      </div>
+    </Link>
   );
 }
 
@@ -60,7 +80,9 @@ function CardRow() {
   return (
     <div className="row card-row-home">
       {cardData.map((card, index) => (
+        <div className='col-3'>
         <Card key={index} title={card.title} type={card.type} img={card.img} typeCard={card.typeCard} />
+        </div>
       ))}
       
     </div>
@@ -78,9 +100,11 @@ function CardColumn() {
   ];
 
   return (
-    <div className="row card-column-home">
+    <div className="row card-column-tatuadorList">
       {cardData.map((card, index) => (
+        <div className='col-3'>
         <Card key={index} title={card.title} type={card.type} img={card.img} typeCard={card.typeCard}/>
+        </div>
       ))}
     </div>
   );

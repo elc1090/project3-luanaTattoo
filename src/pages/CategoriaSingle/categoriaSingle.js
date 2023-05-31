@@ -11,13 +11,12 @@ function CategoriaSingle() {
     const categoriaName = params.categoriaName;
 
     const [tatuadorList,setTatuadorList] = useState([]);
-
-//<CardColumn tatuadorList />    
+ 
 //buscar a lista de tatuadores q estao nessa categoria
 
     useEffect(()=>{
-        Axios.get("https://tattomarket-api.onrender.com/categoria",{params:{categoriaName:categoriaName}}).then((response)=>{
-        //Axios.get("http://localhost:3001/categoria",{params:{categoriaName:categoriaName}}).then((response)=>{
+        //Axios.get("https://tattomarket-api.onrender.com/categoria",{params:{categoriaName:categoriaName}}).then((response)=>{
+        Axios.get("http://localhost:3001/categoria",{params:{categoriaName:categoriaName}}).then((response)=>{
             setTatuadorList(response.data);
         })
     },[]);
@@ -45,11 +44,14 @@ export default CategoriaSingle;
 
 function Card({title,img,type}) {
     return (
+    <div className='col-4'>
+      <Link to={`/tatuador/${title}`} className='link-card'>
       <div className={`card ${type}`}>
         <h2>{title}</h2>
         <img src={img} className='card__image'></img>
-        <Link to={`/tatuador/${title}`}><button>View</button></Link>
       </div>
+      </Link>
+    </div>
     );
 }
   
@@ -58,7 +60,7 @@ function Card({title,img,type}) {
 function CardColumn(tatuadorList) {
    
     return (
-      <div className="card-column-tatuadorList">
+      <div className="row card-column-tatuadorList">
         {tatuadorList.map((card, index) => (
           <Card key={index} title={card.name} type="type2" img={card.foto_perfil}/>
         ))}
@@ -66,21 +68,4 @@ function CardColumn(tatuadorList) {
     );
 }
 
- /* 
-function CategoriaSingle() {
-
-    return (
-      <div>
-        <NavBar/>
-        <div className='tatuadores-body-tatuadorList'>
-            <label className='label-tatuadores-tatuadorList'>Maori</label>
-        </div>
-    
-        <CardColumn />
-        
-      </div>
-    );
-}
-  
-export default CategoriaSingle;
-*/
+ 

@@ -38,13 +38,13 @@ const TatuadorForm = ()=>{
 
     
     const submitTatuador = (event) =>{
-        Axios.post("https://tattomarket-api.onrender.com/tatuadorform/insert",{name:name,age:age,city:city,email:email,senha:senha,categoria:categoria,foto_perfil:perfil,foto_exemplo1:exemplo1,foto_exemplo2:exemplo2,foto_exemplo3:exemplo3,foto_exemplo4:exemplo4});
-        //Axios.post("http://localhost:3001/tatuadorform/insert",{name:name,age:age,city:city,email:email,senha:senha,categoria:categoria,foto_perfil:perfil,foto_exemplo1:exemplo1,foto_exemplo2:exemplo2,foto_exemplo3:exemplo3,foto_exemplo4:exemplo4});
+        //Axios.post("https://tattomarket-api.onrender.com/tatuadorform/insert",{name:name,age:age,city:city,email:email,senha:senha,categoria:categoria,foto_perfil:perfil,foto_exemplo1:exemplo1,foto_exemplo2:exemplo2,foto_exemplo3:exemplo3,foto_exemplo4:exemplo4});
+        Axios.post("http://localhost:3001/tatuadorform/insert",{name:name,age:age,city:city,email:email,senha:senha,categoria:categoria,foto_perfil:perfil,foto_exemplo1:exemplo1,foto_exemplo2:exemplo2,foto_exemplo3:exemplo3,foto_exemplo4:exemplo4});
+        Axios.post("http://localhost:3001/orcamento/insert",{preco_local_braco:braco,preco_local_perna:perna,preco_local_torax:torax,preco_local_mao:mao,preco_local_pe:pe,preco_local_costas:costas,preco_local_cabeca:cabeca,tamanho:tamanho,cor:cor});
     }
     
     const submitOrcamento = (event) =>{
-        Axios.post("https://tattomarket-api.onrender.com/orcamento/insert",{preco_local_braco:braco,preco_local_perna:perna,preco_local_torax:torax,preco_local_mao:mao,preco_local_pe:pe,preco_local_costas:costas,preco_local_cabeca:cabeca,tamanho:tamanho,cor:cor});
-        //Axios.post("http://localhost:3001/orcamento/insert",{preco_local_braco:braco,preco_local_perna:perna,preco_local_torax:torax,preco_local_mao:mao,preco_local_pe:pe,preco_local_costas:costas,preco_local_cabeca:cabeca,tamanho:tamanho,cor:cor});
+        //Axios.post("https://tattomarket-api.onrender.com/orcamento/insert",{preco_local_braco:braco,preco_local_perna:perna,preco_local_torax:torax,preco_local_mao:mao,preco_local_pe:pe,preco_local_costas:costas,preco_local_cabeca:cabeca,tamanho:tamanho,cor:cor});
     }
     const list= [{value:'One',selected:true},{value:'Two'},{value:'Three'},{value:'Four',label:'Four Label'}];
 
@@ -107,9 +107,7 @@ const TatuadorForm = ()=>{
                         </select>
                     </label>                              
                     </div>
-                    <div className='footer'>
-                        <button  onClick={[submitTatuador,submitOrcamento]} className='label-footer'>Enviar</button>
-                    </div>
+                    <button onClick={submitTatuador} className='footer'><span className='label-footer'>Enviar</span></button>
                 </form>
                 <form>
                         <div className='title-form-orcamento'>

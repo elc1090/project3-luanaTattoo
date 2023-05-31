@@ -124,3 +124,20 @@
     background-color: transparent;
 
 }
+
+.tatuadorPage-container{
+    position: relative;
+    width: 1550px;
+    height: 900px;
+    margin-left: 10rem;
+    margin-top: 0rem;
+
+    background: #8D99AE;
+    box-shadow: 5px 4px 4px rgba(0, 0, 0, 0.63);
+    border-radius: 45px;
+}
+
+.tatuador-img{
+    height: 25rem;
+    width: 100%;
+}

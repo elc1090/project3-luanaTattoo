@@ -12,13 +12,14 @@ import TatuadorPage from './pages/TatuadorPage/tatuadorPage';
 import CategoriaList from './pages/Categorias/categoriaList';
 import CategoriaSingle from './pages/CategoriaSingle/categoriaSingle';
 import {disableReactDevTools} from '@fvilers/disable-react-devtools';
+import Home from './pages/Home/home';
 
 if(process.env.NODE_ENV === 'production') disableReactDevTools();
 
 const router = createBrowserRouter([
     {
         path:"/",
-        element:<App/>,
+        element:<Home/>,
     },
     /*
     {
