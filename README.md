@@ -1,8 +1,7 @@
 # Tattoo Market
 
 
-![Screenshot do projeto](https://mdswanson.com/static/chops-ux-step-4.png "Screenshot do projeto").
-
+![Screenshot do projeto](https://raw.githubusercontent.com/elc1090/project3-luanaTattoo/main/print.png)
 
 #### Descrição
 
