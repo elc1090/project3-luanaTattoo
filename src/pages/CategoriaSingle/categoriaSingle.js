@@ -13,11 +13,10 @@ function CategoriaSingle() {
 
     const [tatuadorList,setTatuadorList] = useState([]);
  
-//buscar a lista de tatuadores q estao nessa categoria
 
     useEffect(()=>{
-        //Axios.get("https://tattomarket-api.onrender.com/categoria",{params:{categoriaName:categoriaName}}).then((response)=>{
-        Axios.get("http://localhost:3001/categoria",{params:{categoriaName:categoriaName}}).then((response)=>{
+        Axios.get("https://tattomarket-api.onrender.com/categoria",{params:{categoriaName:categoriaName}}).then((response)=>{
+        //Axios.get("http://localhost:3001/categoria",{params:{categoriaName:categoriaName}}).then((response)=>{
             setTatuadorList(response.data);
         })
     },[]);

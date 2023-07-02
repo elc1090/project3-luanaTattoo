@@ -29,8 +29,8 @@ const HomeTatuador = ()=>{
     const[tatuador,setTatuador] = useState([]);
     
     useEffect(()=>{
-      //Axios.get("https://tattomarket-api.onrender.com/tatuador",{params:{tatuadorName:tatuadorName}}).then((response)=>{
-      Axios.get("http://localhost:3001/tatuador",{params:{tatuadorEmail:tatuadorEmail}}).then((response)=>{
+      Axios.get("https://tattomarket-api.onrender.com/tatuador",{params:{tatuadorEmail:tatuadorEmail}}).then((response)=>{
+      //Axios.get("http://localhost:3001/tatuador",{params:{tatuadorEmail:tatuadorEmail}}).then((response)=>{
           setTatuador(response.data);
       })
     },[]);
@@ -115,18 +115,6 @@ function CardRow() {
 */
  
 function CardRow() {
-
-  /*
-   const[orcamentos,setOrcamentos] = useState([]);
-
-    useEffect(()=>{
-      //Axios.get("https://tattomarket-api.onrender.com/categoria",{params:{categoriaName:categoriaName}}).then((response)=>{
-      Axios.get("http://localhost:3001/orcamentosTatuador",{params:{tatuadorEmail:tatuadorEmail}}).then((response)=>{
-          setOrcamentos(response.data);
-      })
-    },[]);
-
-  */
 
   const cardData = [
     { title: "Orcamento 1", type: "type2",typeCard:"tatuador" },

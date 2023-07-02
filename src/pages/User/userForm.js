@@ -62,18 +62,10 @@ const UserForm = ()=>{
 
 
     const handleSubmit = (event) =>{
-        Axios.post("http://localhost:3001/userform/insert",{name:name,email:email,senha:senha});
+        Axios.post("https://tattomarket-api.onrender.com/userform/insert",{name:name,email:email,senha:senha});
+        //Axios.post("http://localhost:3001/userform/insert",{name:name,email:email,senha:senha});
     }
 
-/*
- <li class="active" ><a data-toggle="tab" href="#cliente">Cliente</a></li>
-                        <li><a data-toggle="tab" href="#tatuador">Tatuador</a></li>
-<ul class="nav nav-tabs">
-                        <CustomLink to="/tatuadorForm">Tatuador</CustomLink>
-                        <CustomLink to="/tatuadorlist">Cliente</CustomLink>
-                    </ul>
-
-*/
     
 
     

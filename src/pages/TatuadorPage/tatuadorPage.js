@@ -14,41 +14,10 @@ const TatuadorPage = ()=>{
     const clientEmail = params.clientEmail;
 
     const[tatuador,setTatuador] = useState([]);
-    /*
-    const[clientEmail,setUser] = useState();
-
-    useEffect(() => {
-        const loggedInUser = localStorage.getItem("user");
-        try {
-          const foundUser = JSON.parse(loggedInUser);
-          setUser(foundUser);
-        }catch (error) {
-          // Tratar o erro ao analisar a string JSON
-          console.log("Erro ao analisar o usuário armazenado:", error);
-          // Ou definir o usuário como um valor padrão, se apropriado
-          setUser(null);
-        }
-    }, []);
-
-    const[tipoUsuario,setTipoUsuario] = useState();
-
-    useEffect(() => {
-        const loggedInTypeUser = localStorage.getItem("typeUser");
-        try {
-          const foundType = JSON.parse(loggedInTypeUser);
-          setTipoUsuario(foundType);
-        }catch (error) {
-          // Tratar o erro ao analisar a string JSON
-          console.log("Erro ao analisar o usuário armazenado:", error);
-          // Ou definir o usuário como um valor padrão, se apropriado
-          setTipoUsuario(null);
-        }
-    }, []);
-  */
-
+   
     useEffect(()=>{
-        //Axios.get("https://tattomarket-api.onrender.com/tatuador",{params:{tatuadorName:tatuadorName}}).then((response)=>{
-        Axios.get("http://localhost:3001/tatuador",{params:{tatuadorEmail:tatuadorEmail}}).then((response)=>{
+        Axios.get("https://tattomarket-api.onrender.com/tatuador",{params:{tatuadorEmail:tatuadorEmail}}).then((response)=>{
+        //Axios.get("http://localhost:3001/tatuador",{params:{tatuadorEmail:tatuadorEmail}}).then((response)=>{
             setTatuador(response.data);
         })
     },[]);

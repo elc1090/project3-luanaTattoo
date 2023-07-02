@@ -24,8 +24,8 @@ function CardRow({clientEmail}) {
 
     
     useEffect(()=>{
-        //Axios.get("https://tattomarket-api.onrender.com/categorialist").then((response)=>{
-        Axios.get("http://localhost:3001/categorialist").then((response)=>{
+        Axios.get("https://tattomarket-api.onrender.com/categorialist").then((response)=>{
+        //Axios.get("http://localhost:3001/categorialist").then((response)=>{
             setCategoriaList(response.data);
         })
     },[]);

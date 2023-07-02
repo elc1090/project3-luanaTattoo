@@ -7,27 +7,7 @@ import { faUser,faSkull } from '@fortawesome/free-solid-svg-icons'
 
 
 const WelcomePage = ()=>{
-    
-
-/*
-<div className='welcome-title-body'>
-                    <label className='welcome-label-title'>BEM VINDO AO TATTOO MARKET</label>
-</div>
-<div className='box-usuarios'>
-    <Link to={'/login/cliente'}>
-    <div className='box-cliente'>
-        <FontAwesomeIcon icon={faUser} size="8x" style={{color: "#ffffff",background:"#2B2D42",marginLeft:"4rem",marginTop:"3rem"}} />                        
-        <label className='box-cliente-label'>Cliente</label>
-    </div>
-    </Link>
-    <Link to={'/login/tatuador'}>
-    <div className='box-tatuador'>
-        <FontAwesomeIcon icon={faSkull} size="8x" style={{color: "#ffffff",background:"#2B2D42",marginLeft:"4rem",marginTop:"3rem"}} />
-        <label className='box-tatuador-label'>Tatuador</label>
-    </div>
-    </Link>
-</div>
-*/
+  
    
     return (<>
         <div className='welcome-wrapper'>

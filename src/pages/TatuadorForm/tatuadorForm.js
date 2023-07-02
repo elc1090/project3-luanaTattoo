@@ -39,10 +39,9 @@ const TatuadorForm = ()=>{
 
     
     const submitTatuador = (event) =>{
-        //Axios.post("https://tattomarket-api.onrender.com/tatuadorform/insert",{name:name,age:age,city:city,email:email,senha:senha,categoria:categoria,foto_perfil:perfil,foto_exemplo1:exemplo1,foto_exemplo2:exemplo2,foto_exemplo3:exemplo3,foto_exemplo4:exemplo4});
-        Axios.post("http://localhost:3001/tatuadorform/insert",{name:name,age:age,city:city,email:email,senha:senha,categoria:categoria,foto_perfil:perfil,foto_exemplo1:exemplo1,foto_exemplo2:exemplo2,foto_exemplo3:exemplo3,foto_exemplo4:exemplo4});
-        //Axios.post("https://tattomarket-api.onrender.com/orcamento/insert",{preco_local_braco:braco,preco_local_perna:perna,preco_local_torax:torax,preco_local_mao:mao,preco_local_pe:pe,preco_local_costas:costas,preco_local_cabeca:cabeca,tamanho:tamanho,cor:cor});
-        //Axios.post("http://localhost:3001/orcamento/insert",{preco_local_braco:braco,preco_local_perna:perna,preco_local_torax:torax,preco_local_mao:mao,preco_local_pe:pe,preco_local_costas:costas,preco_local_cabeca:cabeca,tamanho:tamanho,cor:cor});
+        Axios.post("https://tattomarket-api.onrender.com/tatuadorform/insert",{name:name,age:age,city:city,email:email,senha:senha,categoria:categoria,foto_perfil:perfil,foto_exemplo1:exemplo1,foto_exemplo2:exemplo2,foto_exemplo3:exemplo3,foto_exemplo4:exemplo4});
+        //Axios.post("http://localhost:3001/tatuadorform/insert",{name:name,age:age,city:city,email:email,senha:senha,categoria:categoria,foto_perfil:perfil,foto_exemplo1:exemplo1,foto_exemplo2:exemplo2,foto_exemplo3:exemplo3,foto_exemplo4:exemplo4});
+        
     }
     
     
@@ -179,86 +178,3 @@ const TatuadorForm = ()=>{
 };
 export default TatuadorForm;
 
-/*
-
-<form>
-                        <div className='title-form-orcamento'>
-                            <label className='label-form-orcamento'>Caracterizar Orçamento</label>
-                        </div>
-                        <label className='label-braco'>Braço</label>
-                        <input  className='input-braco'
-                            type="text"
-                            onChange={(event)=>{
-                            setBraco(event.target.value);
-                            
-                        }}
-                        ></input>
-                        <label className='label-perna'>Perna</label>
-                        <input className='input-perna'
-                            type="number"
-                            onChange={(event)=>{
-                            setPerna(event.target.value);
-                            
-                        }}
-                        ></input>
-                        <label className='label-costas'>Costas</label>
-                        <input  className='input-costas'
-                            type="text"
-                            onChange={(event)=>{
-                            setCostas(event.target.value);
-                            
-                        }}
-                        ></input> 
-                        <label className='label-torax'>Torax</label>
-                        <input  className='input-torax'
-                            type="text"
-                            onChange={(event)=>{
-                            setTorax(event.target.value);
-                            
-                        }}
-                        ></input>
-                        <label className='label-cabeca'>Cabeça</label>
-                        <input  className='input-cabeca'
-                            type="text"
-                            onChange={(event)=>{
-                            setCabeca(event.target.value);
-                            
-                        }}
-                        ></input>
-                        <label className='label-mao'>Maos</label>
-                        <input className='input-mao'
-                            type="number"
-                            onChange={(event)=>{
-                            setMaos(event.target.value);
-                            
-                        }}
-                        ></input>
-                        <label className='label-pe'>Pé</label>
-                        <input  className='input-pe'
-                            type="text"
-                            onChange={(event)=>{
-                            setPe(event.target.value);
-                            
-                        }}
-                        ></input> 
-                        <label className='label-form-tamanho'>Tamanho</label>
-                        <input  className='input-form-tamanho'
-                            type="text"
-                            onChange={(event)=>{
-                            setTam(event.target.value);
-                            
-                        }}
-                        ></input>
-                        <label className='label-form-cor'> Cor 
-                            <select 
-                                onChange={(event)=>{
-                                setCategoria(event.target.value);
-                            }}>
-                                <option value="Preto">Preto</option>
-                                <option value="Colorido">Colorido</option>
-                            </select>
-                        </label>     
-                </form>
-
-
-*/

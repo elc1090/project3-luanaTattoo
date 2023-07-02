@@ -24,12 +24,6 @@ import { StrictMode } from 'react';
 
 if(process.env.NODE_ENV === 'production') disableReactDevTools();
 
-/*
-{
-        path:"/orcamento/:clientEmail",
-        element:<OrcamentoSingle/>,
-    },
-*/
 
 const router = createBrowserRouter([
     {
