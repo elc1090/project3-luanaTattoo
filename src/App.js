@@ -3,7 +3,7 @@ import React,{useState, useEffect} from 'react';
 import Axios from 'axios';
 import  { Route,Routes } from "react-router-dom";
 import Navbar from './components/NavBar2';
-//import UserForm from './pages/User/userForm';
+import UserForm from './pages/User/userForm';
 import TatuadorForm from './pages/TatuadorForm/tatuadorForm';
 import Home from './pages/Home/home';
 //import UserList from './pages/User/userList';
@@ -35,6 +35,7 @@ function App(){
           <Route path="*" element={<WelcomePage/>}></Route>
           <Route path="/home/:clientEmail" element={<Home/>}></Route>
           <Route path="/tatuadorform" element={<TatuadorForm/>}></Route>
+          <Route path="/userform" element={<UserForm/>}></Route>
           <Route path="/tatuadorlist/:clientEmail" element={<TatuadorList/>}></Route>
           <Route path="/categoria/insert" element={<CategoriaInsert/>}></Route>
           <Route path="/orcamentoNovo/:tatuadorEmail/:clientEmail" element={<OrcamentoNew/>}></Route>
