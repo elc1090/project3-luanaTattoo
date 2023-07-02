@@ -8,14 +8,14 @@ const TatuadorModel = require("./models/Tatuador");
 const OrcamentoModel = require("./models/Orcamento");
 const CategoriaModel = require("./models/Categoria");
 
+app.use(cors());
+
+app.use(express.json());
 require('dotenv').config();
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const auth = require("./auth");
 
-app.use(cors());
-
-app.use(express.json());
 
 
 mongoose.connect("mongodb+srv://user2:senha@cluster0.kqt2v3y.mongodb.net/crudTest?retryWrites=true&w=majority",
