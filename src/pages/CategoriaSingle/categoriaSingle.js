@@ -9,45 +9,46 @@ import { Link } from 'react-router-dom';
 function CategoriaSingle() {
     const params = useParams();
     const categoriaName = params.categoriaName;
+    const clientEmail = params.clientEmail;
 
     const [tatuadorList,setTatuadorList] = useState([]);
  
 //buscar a lista de tatuadores q estao nessa categoria
 
     useEffect(()=>{
-        Axios.get("https://tattomarket-api.onrender.com/categoria",{params:{categoriaName:categoriaName}}).then((response)=>{
-        //Axios.get("http://localhost:3001/categoria",{params:{categoriaName:categoriaName}}).then((response)=>{
+        //Axios.get("https://tattomarket-api.onrender.com/categoria",{params:{categoriaName:categoriaName}}).then((response)=>{
+        Axios.get("http://localhost:3001/categoria",{params:{categoriaName:categoriaName}}).then((response)=>{
             setTatuadorList(response.data);
         })
     },[]);
 
 
-    return (
-      <div>
-        <NavBar/>
+    return (<>
+      <NavBar clientEmail={clientEmail}/>
+      <div className='categoriaSingle-wrapper'>
           <div className='tatuadores-body-tatuadorList'>
               <label className='label-tatuadores-tatuadorList'>{categoriaName}</label>
           </div>
           <div className="card-column-tatuadorList">
           {tatuadorList.map((card, index) => (
-            <Card key={index} title={card.name} type="type2" img={card.foto_perfil}/>
+            <Card key={index} title={card.email} name={card.name} type="type2" img={card.foto_perfil} clientEmail={clientEmail}/>
           ))}
           </div>
         
       </div>
-    );
+      </>);
 }
 
 export default CategoriaSingle;
 
 
 
-function Card({title,img,type}) {
+function Card({title,name,img,type,clientEmail}) {
     return (
-    <div className='col-4'>
-      <Link to={`/tatuador/${title}`} className='link-card'>
-      <div className={`card ${type}`}>
-        <h2>{title}</h2>
+    <div className='col-4 bg-transparent'>
+      <Link to={`/tatuador/${title}/${clientEmail}`} className='link-card'>
+      <div className={`card ${type}-categorialist`}>
+        <h2 className='label-nome-categoriaSingle'>{name}</h2>
         <img src={img} className='card__image'></img>
       </div>
       </Link>

@@ -1,36 +1,39 @@
 
 
 .body{
-  background: #EDF2F4;
+  background-image: url("https://raw.githubusercontent.com/luanaFOliveira/storeImagesTrab3/main/backgroundGeral.png");
 
 }
 
-.form{
-  background: #EDF2F4;
+.form-tatuadorForm{
+  background-image: url("https://raw.githubusercontent.com/luanaFOliveira/storeImagesTrab3/main/backgroundGeral.png");
+  padding: 40em;
+}
+.form-cadastro-tatuador-wrapper{
+  background: transparent;
 }
 
-.title-body{
-      
+.title-body-tatuadorForm{
   box-sizing: border-box;
-
+  
   position: relative;
-  width: 427px;
+  width: 600px;
   height: 79px;
   margin-left: 0rem;
-  margin-top: 0rem;
+  margin-top: -35rem;
 
-  background: #2B2D42;
+  background: #8A2D40;
   border: 1px solid #000000;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 30px;
 }
 
-.label-title{
-      
+.label-title-tatuadorForm{
   position: relative;
   width: 430px;
   height: 90px;
- margin-left: -10px;
+  margin-left: 11rem;
+  margin-top: 1rem;
   font-family: 'Inter';
   font-style: normal;
   font-weight: 600;
@@ -41,95 +44,111 @@
   letter-spacing: -0.022em;
   background-color: transparent;
 
-  color: #FFFFFF;
+  color: #000000;
 
 }
 
-.form-body{
+.form-body-tatuadorForm{
 
-  position: relative;
-  width: 1131px;
+  position: absolute;
+  width: 600px;
   height: 700px;
-  margin-left: 0px;
-  margin-top: 0px;
+  margin-left: 22rem;
+  margin-top: 3rem;
 
-  background: #8D99AE;
+  background: #496179;
   border-radius: 45px;
 }
 
+.form-body-tatuadorform-basics{
 
-.label-nome{
-  
-position: absolute;
-width: 84px;
-height: 39px;
-left: 100px;
-top: 50px;
+  position: absolute;
+  width: 600px;
+  height: 700px;
+  margin-left: -20rem;
+  margin-top: 3rem;
 
-font-family: 'Inter';
-font-style: normal;
-font-weight: 600;
-font-size: 30px;
-line-height: 130%;
-/* identical to box height, or 39px */
+  background: #496179;
+  border-radius: 45px;
 
-letter-spacing: -0.022em;
-background-color: transparent;
-
-color: #2B2D42;
 
 }
 
-.input-nome{
- 
-position: absolute;
-width: 271px;
-height: 73px;
-left: 100px;
-top: 90px;
 
-background: #EDF2F4;
-border-radius: 15px;
-
-}
-
-.label-idade{
-  
-position: absolute;
-width: 84px;
-height: 39px;
-left: 100px;
-top: 180px;
-
-font-family: 'Inter';
-font-style: normal;
-font-weight: 600;
-font-size: 30px;
-line-height: 130%;
-/* identical to box height, or 39px */
-
-letter-spacing: -0.022em;
-background-color: transparent;
-
-color: #2B2D42;
-}
-
-.input-idade{
-  
-position: absolute;
-width: 271px;
-height: 73px;
-left: 100px;
-top: 220px;
-
-background: #EDF2F4;
-border-radius: 15px;
-}
-
-.label-email{
+.label-cidade-tatuadorForm{
    
+  position: absolute;
+  width: 84px;
+  height: 39px;
+  left: 100px;
+  top: 60px;
+  
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 130%;
+  /* identical to box height, or 39px */
+  background-color: transparent;
+
+  letter-spacing: -0.022em;
+  
+  color: #000000;
+  
+}
+  
+  
+.input-cidade-tatuadorForm{
+    
+    position: absolute;
+    width: 400px;
+    height: 73px;
+    left: 100px;
+    top: 100px;
+    
+    background: #EDF2F4;
+    border-radius: 15px;
+}
+  
+
+.label-idade-tatuadorForm{
+  
+  position: absolute;
+  width: 84px;
+  height: 39px;
+  left: 100px;
+  top: 180px;
+  
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 130%;
+  /* identical to box height, or 39px */
+  
+  letter-spacing: -0.022em;
+  background-color: transparent;
+  
+  color: #000000;
+}
+  
+.input-idade-tatuadorForm{
+    
+  position: absolute;
+  width: 400px;
+  height: 73px;
+  left: 100px;
+  top: 220px;
+  
+  background: #EDF2F4;
+  border-radius: 15px;
+}
+
+
+.label-perfil-tatuadorForm{
+  
 position: absolute;
-width: 84px;
+width: 200px;
 height: 39px;
 left: 100px;
 top: 300px;
@@ -144,66 +163,109 @@ line-height: 130%;
 letter-spacing: -0.022em;
 background-color: transparent;
 
-color: #2B2D42;
+color: #000000;
+
+}
+
+.input-perfil-tatuadorForm{
+ 
+position: absolute;
+width: 400px;
+height: 53px;
+left: 100px;
+top: 340px;
+
+background: #EDF2F4;
+border-radius: 15px;
 
 }
 
 
-.input-email{
-  
+.label-exemplos-tatuadorForm{
+   
+position: absolute;
+width: 400px;
+height: 39px;
+left: 100px;
+top: 390px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 30px;
+line-height: 130%;
+/* identical to box height, or 39px */
+
+letter-spacing: -0.022em;
+background-color: transparent;
+
+color: #000000;
+
+}
+
+
+.input-exemplo1-tatuadorForm{
+
   position: absolute;
-  width: 271px;
-  height: 73px;
+  width: 180px;
+  height: 53px;
   left: 100px;
-  top: 340px;
-  
+  top: 430px;
+
   background: #EDF2F4;
   border-radius: 15px;
-  }
+}
 
-  
-.label-cidade{
    
-  position: absolute;
-  width: 84px;
-  height: 39px;
-  left: 100px;
-  top: 420px;
   
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 30px;
-  line-height: 130%;
-  /* identical to box height, or 39px */
-  background-color: transparent;
-
-  letter-spacing: -0.022em;
-  
-  color: #2B2D42;
-  
-  }
-  
-  
-  .input-cidade{
+.input-exemplo2-tatuadorForm{
     
     position: absolute;
-    width: 271px;
-    height: 73px;
-    left: 100px;
-    top: 460px;
+    width: 180px;
+    height: 53px;
+    left: 320px;
+    top: 430px;
     
     background: #EDF2F4;
     border-radius: 15px;
-    }
+
+}
+
+  
+.input-exemplo3-tatuadorForm{
+    
+    position: absolute;
+    width: 180px;
+    height: 53px;
+    left: 100px;
+    top: 500px;
+    
+    background: #EDF2F4;
+    border-radius: 15px;
+}
+
+    
+  
+.input-exemplo4-tatuadorForm{
+    
+    position: absolute;
+    width: 180px;
+    height: 53px;
+    left: 320px;
+    top: 500px;
+    
+    background: #EDF2F4;
+    border-radius: 15px;
+}
+  
   
 
-.label-categoria{
+.label-categoria-tatuadorForm{
     position: absolute;
     width: 52px;
     height: 39px;
     left: 100px;
-    top: 550px;
+    top: 570px;
 
     font-family: 'Inter';
     font-style: normal;
@@ -215,21 +277,21 @@ color: #2B2D42;
     letter-spacing: -0.022em;
     background-color: transparent;
 
-    color: #2B2D42;
+    color: #000000;
 
 }
 
 
-.footer{
-      
-  box-sizing: border-box;
-  position: relative;
-  width: 236px;
-  height: 53px;
-  margin-left: 0rem;
-  margin-top: 0rem;
+.footer-tatuadorForm{
 
-  background: #8D99AE;
+  box-sizing: border-box;
+  position: absolute;
+  width: 200px;
+  height: 53px;
+  left: 310px;
+  top: 600px;
+  
+  background: #2B2D42;
   border: 1px solid #000000;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 30px;
@@ -237,8 +299,7 @@ color: #2B2D42;
 }
 
 
-.label-footer{
-
+.label-footer-tatuadorForm{
   position: relative;
   width: 58px;
   height: 26px;
@@ -257,6 +318,153 @@ color: #2B2D42;
   
 }
 
+
+ 
+.tatuador-label-nome{
+    
+  position: absolute;
+  width: 84px;
+  height: 39px;
+  left: 100px;
+  top: 60px;
+  
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 130%;
+  /* identical to box height, or 39px */
+  
+  letter-spacing: -0.022em;
+  background-color: transparent;
+  
+  color: #000000;
+  
+}
+  
+.tatuador-input-nome{
+   
+  position: relative;
+  width: 400px;
+  height: 73px;
+  left: 100px;
+  top: 100px;
+  
+  background: #EDF2F4;
+  border-radius: 15px;
+  
+}
+  
+  
+.tatuador-label-email{
+     
+  position: absolute;
+  width: 84px;
+  height: 39px;
+  left: 100px;
+  top: 190px;
+  
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 130%;
+  /* identical to box height, or 39px */
+  
+  letter-spacing: -0.022em;
+  background-color: transparent;
+  
+  color: #000000;
+  
+}
+  
+  
+.tatuador-input-email{
+    
+  position: absolute;
+  width: 400px;
+  height: 73px;
+  left: 100px;
+  top: 230px;
+  
+  background: #EDF2F4;
+  border-radius: 15px;
+}
+  
+  
+ 
+.tatuador-label-senha{
+     
+  position: absolute;
+  width: 84px;
+  height: 39px;
+  left: 100px;
+  top: 320px;
+  
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 130%;
+  /* identical to box height, or 39px */
+  background-color: transparent;
+
+  letter-spacing: -0.022em;
+  
+  color: #000000;
+    
+}
+    
+    
+.tatuador-input-senha{
+    
+  position: absolute;
+  width: 400px;
+  height: 73px;
+  left: 100px;
+  top: 360px;
+  
+  background: #EDF2F4;
+  border-radius: 15px;
+}
+
+
+.tatuador-label-senha-confirmar{
+     
+  position: absolute;
+  width: 300px;
+  height: 39px;
+  left: 100px;
+  top: 450px;
+  
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 130%;
+  /* identical to box height, or 39px */
+  background-color: transparent;
+
+  letter-spacing: -0.022em;
+  
+  color: #000000;
+    
+}
+    
+    
+.tatuador-input-senha-confirmar{
+    
+  position: absolute;
+  width: 400px;
+  height: 73px;
+  left: 100px;
+  top: 490px;
+  
+  background: #EDF2F4;
+  border-radius: 15px;
+}
+
+/*
 .label-form-orcamento{
   
 position: absolute;
@@ -270,7 +478,7 @@ font-style: normal;
 font-weight: 600;
 font-size: 30px;
 line-height: 130%;
-/* or 39px */
+
 
 letter-spacing: -0.022em;
 background-color: transparent;
@@ -293,7 +501,6 @@ font-style: normal;
 font-weight: 600;
 font-size: 30px;
 line-height: 130%;
-/* identical to box height, or 39px */
 
 letter-spacing: -0.022em;
 background-color: transparent;
@@ -329,7 +536,6 @@ font-style: normal;
 font-weight: 600;
 font-size: 30px;
 line-height: 130%;
-/* identical to box height, or 39px */
 
 letter-spacing: -0.022em;
 background-color: transparent;
@@ -365,7 +571,6 @@ border-radius: 15px;
   font-weight: 600;
   font-size: 30px;
   line-height: 130%;
-  /* identical to box height, or 39px */
   
   letter-spacing: -0.022em;
   background-color: transparent;
@@ -401,7 +606,6 @@ border-radius: 15px;
   font-weight: 600;
   font-size: 30px;
   line-height: 130%;
-  /* identical to box height, or 39px */
   
   letter-spacing: -0.022em;
   background-color: transparent;
@@ -437,7 +641,6 @@ border-radius: 15px;
   font-weight: 600;
   font-size: 30px;
   line-height: 130%;
-  /* identical to box height, or 39px */
   
   letter-spacing: -0.022em;
   background-color: transparent;
@@ -473,7 +676,6 @@ border-radius: 15px;
   font-weight: 600;
   font-size: 30px;
   line-height: 130%;
-  /* identical to box height, or 39px */
   
   letter-spacing: -0.022em;
   background-color: transparent;
@@ -509,7 +711,6 @@ border-radius: 15px;
   font-weight: 600;
   font-size: 30px;
   line-height: 130%;
-  /* identical to box height, or 39px */
   
   letter-spacing: -0.022em;
   background-color: transparent;
@@ -545,7 +746,6 @@ border-radius: 15px;
   font-weight: 600;
   font-size: 30px;
   line-height: 130%;
-  /* identical to box height, or 39px */
   
   letter-spacing: -0.022em;
   background-color: transparent;
@@ -580,7 +780,6 @@ border-radius: 15px;
   font-weight: 600;
   font-size: 30px;
   line-height: 130%;
-  /* identical to box height, or 39px */
 
   letter-spacing: -0.022em;
   background-color: transparent;
@@ -588,3 +787,4 @@ border-radius: 15px;
   color: #2B2D42;
 
 }
+*/

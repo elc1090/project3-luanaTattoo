@@ -1,17 +1,18 @@
 .body{
-    background-color: #EDF2F4;
+    background-image: url("https://raw.githubusercontent.com/luanaFOliveira/storeImagesTrab3/main/backgroundGeral.png");
 
 }
 .container-home {
     display: flex;
     justify-items: left;
     margin-top: 20px;
+
 }
 
 
 
 .card {
-    background-color: #8D99AE;
+    background-color: #496179;
     padding: 20px;
     margin-bottom: 10px;
 
@@ -19,8 +20,8 @@
 
 
 .h2{
-    color:#ffff;
-    background-color: transparent;
+    color:#000000;
+    background: transparent;
 
 }
 
@@ -38,6 +39,7 @@
     flex-direction: row;
     justify-items: left;
     width: 100%;
+    background: transparent;
 }
 
 .card-column-home {
@@ -45,6 +47,16 @@
     justify-items: left;
     flex-direction: column;
     margin-top: 20px;
+    background: transparent;
+
+}
+
+.categoria-home-row-wrapper{
+    background: transparent;
+}
+
+.tatuador-home-row-wrapper{
+    background: transparent;
 }
 
 
@@ -53,7 +65,7 @@
     height: 300px;
     width: 400px;  
     text-align: center;
-    background: #8D99AE;
+    background: #496179;
     box-shadow: 5px 4px 4px rgba(0, 0, 0, 0.63);
     border-radius: 26px;
 
@@ -61,7 +73,7 @@
 
 
 .card.type2-home {
-    background: #8D99AE;
+    background: #496179;
     box-shadow: 5px 4px 4px rgba(0, 0, 0, 0.63);
     border-radius: 26px;
     justify-items: left;
@@ -78,13 +90,13 @@
     
     position: relative;
     
-    margin-top:40px;
+    margin-top:10px;
     width: 234px;
     height: 65px;
     margin-left: 0rem;
     
     
-    background: #2B2D42;
+    background: #8A2D40;
     border: 1px solid #000000;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 30px;
@@ -109,22 +121,25 @@
     letter-spacing: -0.022em;
     background-color: transparent;
 
-    color: #FFFFFF;
+    color: #000000;
     
 }
 
 .home-wrapper{
     justify-items: left;
-    
+    padding:3em;
+    background-image: url("https://raw.githubusercontent.com/luanaFOliveira/storeImagesTrab3/main/backgroundGeral.png");
+
 }
 
 .title-home-card{
     color: #FFFFFF;
-    background-color: transparent;
+    background: transparent;
 
 }
 
 .link-card{
     text-decoration: none;
+    background: transparent;
 }
 

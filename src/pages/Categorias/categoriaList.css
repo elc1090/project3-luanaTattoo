@@ -7,9 +7,15 @@
 
 .wrapper-categoriaList{
     
-    justify-content: left;
-    background-color: #EDF2F4 ;
+    justify-content: center;
+    background:transparent ;
+    margin-left: -35em;
+    margin-right: -35em;
+}
 
+.categoriaList-wrapper{
+    background-image: url("https://raw.githubusercontent.com/luanaFOliveira/storeImagesTrab3/main/backgroundGeral.png");
+    padding: 40em;
 }
 
 
@@ -19,14 +25,14 @@
 
     position: relative;
 
-    margin-top:100px;
+    margin-top:-35em;
     width: 234px;
     height: 65px;
-    margin-left: 50px;
+    margin-left: -35em;
 
 
 
-    background: #2B2D42;
+    background: #8A2D40;
     border: 1px solid #000000;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 30px;
@@ -52,7 +58,7 @@
     letter-spacing: -0.022em;
     background-color: transparent;
 
-    color: #FFFFFF;
+    color: #000000;
 
 }
 
@@ -62,10 +68,11 @@
     flex-direction: row;
     cursor: pointer;
     width: 100%;
+    background: transparent;
 }
 
 
-.card.type1 {
+.card.type1-categorialist{
     overflow: hidden;
     box-shadow: 0 2px 20px #e1e5ee;
     border-radius: 0.2rem;
@@ -75,7 +82,7 @@
     transition: transform 200ms ease-in;
     width: 100%;
         
-    background: #8D99AE;
+    background: #496179;
     box-shadow: 5px 4px 4px rgba(0, 0, 0, 0.63);
     border-radius: 26px;
     
@@ -87,11 +94,12 @@
 
 .title-card-categoriaList{
     background-color: transparent;
-
+    text-align: center;
+    color: #000 !important;;
 }
 
 .h2{
-    background-color: transparent;
+    background: transparent;
 
 }
 

@@ -1,0 +1,125 @@
+
+
+.home-wrapper-tatuador{
+    justify-items: left;
+    background-image: url("https://raw.githubusercontent.com/luanaFOliveira/storeImagesTrab3/main/backgroundGeral.png");
+    padding: 20em;
+    
+}
+
+
+.tatuador-home-img{
+    height: 18rem;
+    width: 80%;
+    margin-left: 2rem;
+}
+
+.nome-body-home-tatuador{
+
+    box-sizing: border-box;
+    
+    position: absolute;
+    
+    margin-top: -17rem;
+    width: 800px;
+    height: 80px;
+    margin-left: -16rem;
+    
+    
+    background: #8A2D40;
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+    
+}
+    
+.label-nome-home-tatuador{
+    
+            
+    margin-top: 15px;
+    width: 500px;
+    height: 78px;
+    margin-left: 40px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 130%;
+    
+    letter-spacing: -0.022em;
+    background-color: transparent;
+
+    color: #000000;
+    
+}
+
+
+.orcamentos-body-home-tatuador{
+
+    box-sizing: border-box;
+    
+    position: absolute;
+    
+    margin-top:-16rem;
+    width: 800px;
+    height: 60px;
+    margin-left: 45rem;
+    
+    
+    background: #8A2D40;
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+    
+}
+    
+.label-orcamentos-home-tatuador{
+    
+            
+    margin-top: 10px;
+    width: 153px;
+    height: 78px;
+    margin-left: 330px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 130%;
+    
+    letter-spacing: -0.022em;
+    background-color: transparent;
+
+    color: #000000;
+    
+}
+
+.fotos-home-tatuador-wrapper{
+
+    position: relative;
+    width: 800px;
+    height: 700px;
+    margin-left: -16rem;
+    margin-top: -10rem;
+    
+    background: #496179;
+    border-radius: 45px;
+
+}
+
+.card.type2-home-tatuador {
+    background: #496179;
+    box-shadow: 5px 4px 4px rgba(0, 0, 0, 0.63);
+    border-radius: 26px;
+    justify-items: left;
+    height: 200px;
+    width: 780px;
+    text-align: left;
+
+}
+
+.card-row-home-tatuador{
+    margin-left: 0rem;
+    margin-top: -1rem;
+}

@@ -1,11 +1,9 @@
 
-.body{
-    background: #EDF2F4;
 
-}
 
-.form{
-    background: #EDF2F4 !important;
+.form-orcamentoNovo{
+    background-image: url("https://raw.githubusercontent.com/luanaFOliveira/storeImagesTrab3/main/backgroundGeral.png");
+    padding: 40em;
 }
 
 .title-body{
@@ -15,10 +13,10 @@
     position: absolute;
     width: 427px;
     height: 79px;
-    left: 154px;
-    top: 130px;
+    left: 700px;
+    top: 100px;
 
-    background: #2B2D42;
+    background: #8A2D40;
     border: 1px solid #000000;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 30px;
@@ -41,19 +39,19 @@
     background-color: transparent;
     letter-spacing: -0.022em;
 
-    color: #FFFFFF;
+    color: #000000;
 
 }
 
 .form-body{
 
     position: absolute;
-    width: 1131px;
-    height: 769px;
-    left: 154px;
-    top: 230px;
+    width: 750px;
+    height: 750px;
+    left: 550px;
+    top: 200px;
 
-    background: #8D99AE;
+    background: #496179;
     border-radius: 45px;
 }
 
@@ -63,7 +61,7 @@
     width: 141px;
     height: 39px;
     left: 130px;
-    top: 100px;
+    top: 50px;
     
     font-family: 'Inter';
     font-style: normal;
@@ -75,7 +73,7 @@
     letter-spacing: -0.022em;
     background-color: transparent;
 
-    color: #2B2D42;
+    color: #000000;
 
 }
 
@@ -84,7 +82,42 @@
     width: 470px;
     height: 176px;
     left: 130px;
-    top: 150px;
+    top: 100px;
+    
+    background: #EDF2F4;
+    border-radius: 15px;
+
+}
+
+
+
+.label-foto{
+    position: absolute;
+    width: 141px;
+    height: 39px;
+    left: 130px;
+    top: 290px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 130%;
+    /* identical to box height, or 39px */
+    
+    letter-spacing: -0.022em;
+    background-color: transparent;
+
+    color: #000000;
+
+}
+
+.input-foto{
+    position: absolute;
+    width: 470px;
+    height: 73px;
+    left: 130px;
+    top: 330px;
     
     background: #EDF2F4;
     border-radius: 15px;
@@ -96,7 +129,7 @@
     width: 130px;
     height: 39px;
     left: 130px;
-    top: 340px;
+    top: 410px;
 
     font-family: 'Inter';
     font-style: normal;
@@ -108,15 +141,27 @@
 
     letter-spacing: -0.022em;
 
-    color: #2B2D42;
+    color: #000000;
 }
 
 .input-tamanho{
     position: absolute;
-    width: 271px;
+    width: 200px;
     height: 73px;
     left: 130px;
-    top: 380px;
+    top: 450px;
+
+    background: #EDF2F4;
+    border-radius: 15px;
+}
+
+
+.input-local{
+    position: absolute;
+    width: 200px;
+    height: 73px;
+    left: 400px;
+    top: 450px;
 
     background: #EDF2F4;
     border-radius: 15px;
@@ -127,7 +172,7 @@
     width: 52px;
     height: 39px;
     left: 130px;
-    top: 470px;
+    top: 540px;
 
     font-family: 'Inter';
     font-style: normal;
@@ -139,7 +184,7 @@
 
     letter-spacing: -0.022em;
 
-    color: #2B2D42;
+    color: #000000;
 
 }
 
@@ -148,8 +193,8 @@
     position: absolute;
     width: 211px;
     height: 39px;
-    left: 130px;
-    top: 570px;
+    left: 390px;
+    top: 410px;
     
     font-family: 'Inter';
     font-style: normal;
@@ -161,7 +206,7 @@
 
     letter-spacing: -0.022em;
     
-    color: #2B2D42;
+    color: #000000;
     
 }
 
@@ -172,8 +217,8 @@
     position: absolute;
     width: 236px;
     height: 53px;
-    left: 887px;
-    top: 820px;
+    left: 800px;
+    top: 860px;
 
     background: #2B2D42;
     border: 1px solid #000000;
@@ -187,8 +232,8 @@
     position: absolute;
     width: 58px;
     height: 26px;
-    left: 100px;
-    top: 20px;
+    left: 90px;
+    top: 13px;
     
     font-family: 'Inter';
     font-style: normal;
@@ -199,5 +244,6 @@
     background-color: transparent;
 
     letter-spacing: -0.022em;
+    color:#FFFFFF;
     
 }

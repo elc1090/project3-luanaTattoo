@@ -2,17 +2,17 @@ import React,{useState,useEffect} from 'react';
 import './tatuadorListStyle.css';
 import Axios from 'axios';
 import NavBar from '../../components/NavBar2'
-import { Link } from 'react-router-dom';
+import { Link,useParams } from 'react-router-dom';
 
 
 
 
-function Card({title,img,type}) {
+function Card({email,name,img,type,clientEmail}) {
     return (
-    <div className='col-4'>
-        <Link to={`/tatuador/${title}`} className='link-card'>
-            <div className={`card ${type}`}>
-                <h2>{title}</h2>
+    <div className='col-4 bg-transparent'>
+        <Link to={`/tatuador/${email}/${clientEmail}`} className='link-card'>
+            <div className={`card ${type}-tatuadorlist`}>
+                <h2>{name}</h2>
                 <img src={img} className='card__image'></img>
             </div>
         </Link>
@@ -23,12 +23,12 @@ function Card({title,img,type}) {
   
 
 
-function CardColumn() {
+function CardColumn({clientEmail}) {
     const [tatuadorList,setTatuadorList] = useState([]);
     
     useEffect(()=>{
-        Axios.get("https://tattomarket-api.onrender.com/tatuadorlist").then((response)=>{
-        //Axios.get("http://localhost:3001/tatuadorlist").then((response)=>{
+        //Axios.get("https://tattomarket-api.onrender.com/tatuadorlist").then((response)=>{
+        Axios.get("http://localhost:3001/tatuadorlist").then((response)=>{
             setTatuadorList(response.data);
         })
     },[]);
@@ -37,29 +37,29 @@ function CardColumn() {
     
       <div className="row card-column-tatuadorList">
         {tatuadorList.map((card, index) => (
-          <Card key={index} title={card.name} type="type2" img={card.foto_perfil}/>
+          <Card key={index} email={card.email} name={card.name} type="type2" img={card.foto_perfil} clientEmail={clientEmail}/>
         ))}
       </div>
     );
 }
   
 function TatuadorList() {
-   
-    return (
-      <div>
-        <NavBar/>
+
+    const params = useParams();
+    const clientEmail = params.clientEmail;
+
+    return (<>
+      <NavBar clientEmail={clientEmail}/>
+      <div className='tatuadorList-wrapper'>
         <div className='tatuadores-body-tatuadorList'>
             <label className='label-tatuadores-tatuadorList'>Tatuadores</label>
         </div>
-        <div>
-            <Link to={`../tatuadorForm`}><button className='novoTatuador-body'><span className='label-novoTatuador'>+ Novo Tatuador</span></button></Link>
-        </div>
-        <div>
-            <CardColumn />
+        <div className='cards-wrapper'>
+            <CardColumn clientEmail={clientEmail} />
         </div>
         
       </div>
-    );
+      </>);
 }
   
 export default TatuadorList;

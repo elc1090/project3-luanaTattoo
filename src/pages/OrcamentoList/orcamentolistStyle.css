@@ -1,0 +1,213 @@
+
+.orcamentos-cliente-wrapper{
+    background-image: url("https://raw.githubusercontent.com/luanaFOliveira/storeImagesTrab3/main/backgroundGeral.png");
+    padding: 40em;
+}
+
+.orcamentos-body-orcamentoList{
+        
+    box-sizing: border-box;
+  
+    position: relative;
+    width: 1600px;
+    height: 59px;
+    margin-left: -30em;
+    margin-top: -38em;
+  
+    background: #8A2D40;
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+}
+  
+.label-orcamentos-orcamentoList{
+        
+    position: relative;
+    width: 430px;
+    height: 90px;
+    margin-left: 45rem;
+    margin-top: 0rem;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 39px;
+    /* identical to box height, or 39px */
+  
+    letter-spacing: -0.022em;
+    background-color: transparent;
+  
+    color: #000000;
+  
+}
+
+
+.orcamentos-body-aprovados{
+        
+    box-sizing: border-box;
+  
+    position: absolute;
+    width: 650px;
+    height: 59px;
+    margin-left: -30rem;
+    margin-top: 1rem;
+  
+    background: #8A2D40;
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+}
+  
+.label-orcamentos-aprovados{
+        
+    position: relative;
+    width: 430px;
+    height: 90px;
+    margin-left: 15rem;
+    margin-top: 0rem;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 39px;
+    /* identical to box height, or 39px */
+  
+    letter-spacing: -0.022em;
+    background-color: transparent;
+  
+    color: #000000;
+  
+}
+
+
+.orcamentos-body-pendentes{
+        
+    box-sizing: border-box;
+  
+    position: absolute;
+    width: 650px;
+    height: 59px;
+    margin-left: 29rem;
+    margin-top: 1rem;
+  
+    background: #8A2D40;
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+}
+  
+.label-orcamentos-pendentes{
+        
+    position: relative;
+    width: 430px;
+    height: 90px;
+    margin-left: 17rem;
+    margin-top: 0rem;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 39px;
+    /* identical to box height, or 39px */
+  
+    letter-spacing: -0.022em;
+    background-color: transparent;
+  
+    color: #000000;
+  
+}
+
+.card-row-orcamentoList-aprovados{
+    margin-left: -30rem;
+    margin-right: -50rem;
+    margin-top: 4rem;
+    background: transparent;
+}
+
+
+.card-row-orcamentoList-pendentes{
+    margin-left: 30rem;
+    margin-right: 10rem;
+    margin-top: 0rem;
+    background: transparent;
+}
+
+
+
+.card.type2-orcamentoList {
+    background: #496179;
+    box-shadow: 5px 4px 4px rgba(0, 0, 0, 0.63);
+    border-radius: 26px;
+    justify-items: left;
+    height: 200px;
+    width: 620px;
+    text-align: left;
+
+}
+
+
+
+.label-descricao-orcamentoList{
+    margin-top: -5rem;
+    background-color: transparent;
+    font-size: 20px;
+    color:#000000;
+
+}
+
+
+.label-local-orcamentoList{
+    margin-top: 0rem;
+    background-color: transparent;
+    font-size: 20px;
+    color:#000000;
+
+}
+
+
+.label-tamanho-orcamentoList{
+    margin-top: 0rem;
+    background-color: transparent;
+    font-size: 20px;
+    color:#000000;
+
+}
+
+.label-status-orcamentoList{
+    margin-top: -3rem;
+    margin-left:27rem;
+    text-align: center;
+    color:#FFFFFF;
+    background-color: #2B2D42;
+    font-size: 25px;
+
+}
+.card__image-orcamentoList{
+    margin-top: -3rem;
+    margin-left: 27rem;
+    height: 8rem;
+    object-fit:contain;
+    background-color: transparent;
+
+}
+
+
+.card-footer {
+    border-bottom-right-radius: 0;
+    list-style: none;
+
+    color: #000000;
+}
+
+.footer-type2{
+    color:red;
+}
+
+
+.footer-type1{
+    color:greenyellow;
+}
+
+  
+  
+  

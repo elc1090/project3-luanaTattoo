@@ -1,0 +1,170 @@
+
+.body{
+    background-image: url("https://raw.githubusercontent.com/luanaFOliveira/storeImagesTrab3/main/backgroundWelcome.png");
+
+}
+.welcome-wrapper{
+    background-image: url("https://raw.githubusercontent.com/luanaFOliveira/storeImagesTrab3/main/backgroundWelcome.png");
+    padding: 20em;
+
+}
+
+
+.welcome-title-body{
+        
+    box-sizing: border-box;
+  
+    position: relative;
+    width: 600px;
+    height: 79px;
+    margin-left: 20rem;
+    margin-top: -13rem;
+  
+    background: #2B2D42;
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+}
+  
+.welcome-label-title{
+        
+    position: relative;
+    width: 600px;
+    height: 90px;
+    margin-left: 4rem;
+    margin-top: 1rem;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 39px;
+    /* identical to box height, or 39px */
+  
+    letter-spacing: -0.022em;
+    background-color: transparent;
+  
+    color: #FFFFFF;
+  
+}
+
+.box-usuarios{
+
+    position: relative;
+    width: 600px;
+    height: 480px;
+    margin-left: 20rem;
+    margin-top: 5rem;
+  
+    background: transparent;
+    border-radius: 45px;
+}
+
+.box-cliente{
+    
+    position: absolute;
+    width: 250px;
+    height: 300px;
+    margin-left: 0rem;
+    margin-top: 1rem;
+  
+    background: #191919;
+    border-radius: 45px;
+}
+
+.box-cliente-azul{
+    position: absolute;
+    width: 260px;
+    height: 310px;
+    margin-left: 3rem;
+    margin-top: 1rem;
+  
+    background: #e7191f;
+    border-radius: 45px;
+}
+
+.box-cliente-vermelho{
+    position: absolute;
+    width: 260px;
+    height: 310px;
+    margin-left: 1rem;
+    margin-top: -1rem;
+  
+    background: #5ce1e6;
+    border-radius: 45px;
+
+}
+
+
+.box-tatuador{
+    
+    position: absolute;
+    width: 250px;
+    height: 300px;
+    margin-left: 0rem;
+    margin-top: 1rem;
+  
+    background: #191919;
+    border-radius: 45px;
+}
+
+
+.box-tatuador-azul{
+    position: absolute;
+    width: 260px;
+    height: 310px;
+    margin-left: 21rem;
+    margin-top: 1rem;
+  
+    background: #e7191f;
+    border-radius: 45px;
+}
+
+.box-tatuador-vermelho{
+    position: absolute;
+    width: 260px;
+    height: 310px;
+    margin-left: 1rem;
+    margin-top: -1rem;
+  
+    background: #5ce1e6;
+    border-radius: 45px;
+
+}
+
+.box-cliente-label{
+    margin-top: 50px;
+    width: 153px;
+    height: 78px;
+    margin-left: 80px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 130%;
+    /* or 39px */
+    
+    letter-spacing: -0.022em;
+    background-color: transparent;
+
+    color: #FFFFFF;
+}
+
+.box-tatuador-label{
+    margin-top: 50px;
+    width: 153px;
+    height: 78px;
+    margin-left: 70px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 130%;
+    /* or 39px */
+    
+    letter-spacing: -0.022em;
+    background-color: transparent;
+
+    color: #FFFFFF;
+}

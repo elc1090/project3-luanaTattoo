@@ -7,44 +7,13 @@ import { useParams,Link } from 'react-router-dom';
 
 
 
-const TatuadorPage = ()=>{
+const TatuadorPerfil = ()=>{
 
     const params = useParams();
     const tatuadorEmail = params.tatuadorEmail;
-    const clientEmail = params.clientEmail;
 
     const[tatuador,setTatuador] = useState([]);
-    /*
-    const[clientEmail,setUser] = useState();
 
-    useEffect(() => {
-        const loggedInUser = localStorage.getItem("user");
-        try {
-          const foundUser = JSON.parse(loggedInUser);
-          setUser(foundUser);
-        }catch (error) {
-          // Tratar o erro ao analisar a string JSON
-          console.log("Erro ao analisar o usuário armazenado:", error);
-          // Ou definir o usuário como um valor padrão, se apropriado
-          setUser(null);
-        }
-    }, []);
-
-    const[tipoUsuario,setTipoUsuario] = useState();
-
-    useEffect(() => {
-        const loggedInTypeUser = localStorage.getItem("typeUser");
-        try {
-          const foundType = JSON.parse(loggedInTypeUser);
-          setTipoUsuario(foundType);
-        }catch (error) {
-          // Tratar o erro ao analisar a string JSON
-          console.log("Erro ao analisar o usuário armazenado:", error);
-          // Ou definir o usuário como um valor padrão, se apropriado
-          setTipoUsuario(null);
-        }
-    }, []);
-  */
 
     useEffect(()=>{
         //Axios.get("https://tattomarket-api.onrender.com/tatuador",{params:{tatuadorName:tatuadorName}}).then((response)=>{
@@ -56,15 +25,15 @@ const TatuadorPage = ()=>{
 
     
     return(<>
-    <NavBar clientEmail={clientEmail}/>
-    <div className='tatuadorPage-wrapper'>
+        <NavBarTatuador tatuadorEmail={tatuadorEmail}/>
+        <div className='tatuadorPerfil-wrapper'>
+
             {tatuador.map((val,key)=>{
                 return(<>
                 <div key={key}></div>
                 <div className='column tatuadorPage-container'>
                     <div class="px-4 pt-0 pb-1 bg-transparent "> 
                         <div class="media align-items-end profile-head bg-transparent"> 
-                            <Link to={`../orcamentoNovo/${val.email}/${clientEmail}`}><button className='pedirOrcamento-body'><span className='label-pedirOrcamento'>Pedir Orçamento</span></button></Link>
                             <div class="mr-5 bg-transparent mt-4" >
                                 <img src={val.foto_perfil} alt="..." width="250" class="mt-5 rounded mb-5"></img>
                             </div> 
@@ -109,20 +78,5 @@ const TatuadorPage = ()=>{
 
     
     
-
-
-/*
-   //OBS
-   // FABIANO = BLACK WORK          
-   // MAICO = OLD SCHOOL @maico_borges          v
-   // DANI = GEOMETRICO                 v
-   // IGOR = ORIENTAL @igortattoocs         v
-   // FLAVIO = REALISMO @flavio_bunker_tattoo       v
-   // RODRIGO = FINE LINE @rodrigocosta_tattoo      v
-   // ANDREI = PONTILHISMO @andreipagel             v
-   // RAFA = MINIMALISTA @rafa.handpoke             v
-   // CORVO = AQUARELA @corvo_tattoo
-*/
-    
 };
-export default TatuadorPage;
+export default TatuadorPerfil;
