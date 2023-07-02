@@ -13,7 +13,7 @@ function OrcamentoListTatuador() {
   const [orcamentoList,setOrcamentoList] = useState([]);
 
   useEffect(()=>{
-  Axios.get("https://tattomarket-api.onrender.com/orcamentosTatuador",{params:{tatuadorEmail:tatuadorEmail}}).then((response)=>{
+  Axios.get("http://tattomarket-api.onrender.com/orcamentosTatuador",{params:{tatuadorEmail:tatuadorEmail}}).then((response)=>{
   //Axios.get("http://localhost:3001/orcamentosTatuador",{params:{tatuadorEmail:tatuadorEmail}}).then((response)=>{
       setOrcamentoList(response.data);
   })

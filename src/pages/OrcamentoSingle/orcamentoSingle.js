@@ -16,7 +16,7 @@ const OrcamentoSingle = ()=>{
     const[orcamentoList,setOrcamento] = useState([]);
     
     useEffect(()=>{
-        Axios.get("https://tattomarket-api.onrender.com/orcamento",{params:{idOrcamento:idOrcamento}}).then((response)=>{
+        Axios.get("http://tattomarket-api.onrender.com/orcamento",{params:{idOrcamento:idOrcamento}}).then((response)=>{
         //Axios.get("http://localhost:3001/orcamento",{params:{idOrcamento:idOrcamento}}).then((response)=>{
             setOrcamento(response.data);
         })
@@ -26,7 +26,7 @@ const OrcamentoSingle = ()=>{
     const[preco,setPreco] = useState(0);
 
     const handleClick = (event) =>{
-        Axios.post("https://tattomarket-api.onrender.com/orcamentoAprovado",{preco:preco,status:"Aprovado",idOrcamento:idOrcamento});
+        Axios.post("http://tattomarket-api.onrender.com/orcamentoAprovado",{preco:preco,status:"Aprovado",idOrcamento:idOrcamento});
         //Axios.post("http://localhost:3001/orcamentoAprovado",{preco:preco,status:"Aprovado",idOrcamento:idOrcamento});
     }
     

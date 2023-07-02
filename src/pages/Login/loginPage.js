@@ -29,7 +29,7 @@ const LoginPage = ()=>{
     //Axios.get("https://tattomarket-api.onrender.com/categoria",{params:{categoriaName:categoriaName}}).then((response)=>{
 
     const handleSubmitUser = async (event) =>{
-        const response = await Axios.post("https://tattomarket-api.onrender.com/login/cliente",{email:email,senha:senha});
+        const response = await Axios.post("http://tattomarket-api.onrender.com/login/cliente",{email:email,senha:senha});
         //const response = await Axios.post("http://localhost:3001/login/cliente",{email:email,senha:senha});
         setUser(response.data);
         const listUser = response.data;
@@ -40,7 +40,7 @@ const LoginPage = ()=>{
     }
 
     const handleSubmitTatuador = async (event) =>{
-        const response = await Axios.post("https://tattomarket-api.onrender.com/login/tatuador",{email:email,senha:senha});
+        const response = await Axios.post("http://tattomarket-api.onrender.com/login/tatuador",{email:email,senha:senha});
         //const response = await Axios.post("http://localhost:3001/login/tatuador",{email:email,senha:senha});
         setUser(response.data);
         const listUser = response.data;
