@@ -16,7 +16,7 @@ const TatuadorPerfil = ()=>{
 
 
     useEffect(()=>{
-        Axios.get("http://tattomarket-api.onrender.com/tatuador",{params:{tatuadorEmail:tatuadorEmail}}).then((response)=>{
+        Axios.get("https://tattomarket-api.onrender.com/tatuador",{params:{tatuadorEmail:tatuadorEmail}}).then((response)=>{
         //Axios.get("http://localhost:3001/tatuador",{params:{tatuadorEmail:tatuadorEmail}}).then((response)=>{
             setTatuador(response.data);
         })
