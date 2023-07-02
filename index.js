@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const cookieSession = require("cookie-session");
 const app = express();
 const FoodModel = require("./models/Food");
 const UserModel = require("./models/Usuario");
@@ -9,38 +10,267 @@ const OrcamentoModel = require("./models/Orcamento");
 const CategoriaModel = require("./models/Categoria");
 
 require('dotenv').config();
+const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken");
+const auth = require("./auth");
 
 app.use(cors());
 
 app.use(express.json());
 
-mongoose.connect("mongodb+srv://luana:fodase@cluster0.kqt2v3y.mongodb.net/crudTest?retryWrites=true&w=majority",
+app.use(
+    cookieSession({
+      name: "luana-session",
+      secret: "COOKIE_SECRET", // should use as secret environment variable
+      httpOnly: true
+    })
+);
+
+mongoose.connect("mongodb+srv://user2:senha@cluster0.kqt2v3y.mongodb.net/crudTest?retryWrites=true&w=majority",
 {
     useNewUrlParser:true,
 });
 
-app.post('/insert',async (req,res)=>{
-    const foodName = req.body.foodName;
-    const days = req.body.days;
-    const food = new UserModel({name:foodName,age:days});
 
+app.post('/userform/insert', async (req,res) =>{
+    
+    bcrypt.hash(req.body.senha, 10)
+        .then(async (hashedPassword) => {
+   
+            const nome = req.body.name;
+            const email = req.body.email;
+            const user = new UserModel({name:nome,email:email,senha:hashedPassword});
+            try{
+                await user.save();
+                console.log(user);
+            }catch(err){
+                console.log(err);
+            }
+        });
+        
+
+});
+
+
+app.post('/tatuadorform/insert', async (req,res) =>{
+    
+    bcrypt.hash(req.body.senha, 10)
+        .then(async (hashedPassword) => {             
+            const nome = req.body.name;
+            const idade = req.body.age;
+            const cidade = req.body.city;
+            const email = req.body.email;
+            const categoria = req.body.categoria;
+            const perfil = req.body.foto_perfil;
+            const exemplo1 = req.body.foto_exemplo1;
+            const exemplo2 = req.body.foto_exemplo2;
+            const exemplo3 = req.body.foto_exemplo3;
+            const exemplo4 = req.body.foto_exemplo4;
+            const tatuador = new TatuadorModel({name:nome,age:idade,city:cidade,email:email,senha:hashedPassword,categoria:categoria,foto_perfil:perfil,foto_exemplo1:exemplo1,foto_exemplo2:exemplo2,foto_exemplo3:exemplo3,foto_exemplo4:exemplo4});
+            try{
+                await tatuador.save();
+                console.log(tatuador);
+            }catch(err){
+                console.log(err);
+            }
+        });
+        
+});
+
+app.post('/login/cliente', async (req,res) =>{
+    //var query = require('url').parse(req.url,true).query;
+    //const nome = query.categoriaName;
+    await UserModel.findOne({ email: req.body.email })
+        .then(user=>{
+            bcrypt.compare(req.body.senha, user.senha)
+            .then((passwordCheck) => {
+                // check if password matches
+                console.log(user);
+                if(!passwordCheck) {
+                  return res.status(400).send({
+                    message: "Passwords does not match",
+                    error,
+                  });
+                }
+                 //   create JWT token
+                const token = jwt.sign(
+                    {
+                    userId: user._id,
+                    userEmail: user.email,
+                    },
+                    "RANDOM-TOKEN",
+                    { expiresIn: "24h" }
+                );
+                //   return success response
+                res.send(user);
+                /*
+                res.status(200).send({
+                    message: "Login Successful",
+                    name: user.name,
+                    token,
+                });
+                */
+            })
+            .catch((error) => {
+                res.status(400).send({
+                message: "Passwords does not match",
+                error,
+                });
+            })
+        })
+        // catch error if email does not exist
+        .catch((e) => {
+            res.status(404).send({
+            message: "Email not found",
+            e,
+            });
+        });
+
+});
+
+
+app.post('/login/tatuador', async (req,res) =>{
+    //var query = require('url').parse(req.url,true).query;
+    //const nome = query.categoriaName;
+    await TatuadorModel.findOne({ email: req.body.email })
+        .then(user=>{
+            bcrypt.compare(req.body.senha, user.senha)
+            .then((passwordCheck) => {
+                // check if password matches
+                console.log(user);
+                if(!passwordCheck) {
+                  return res.status(400).send({
+                    message: "Passwords does not match",
+                    error,
+                  });
+                }
+                 //   create JWT token
+                const token = jwt.sign(
+                    {
+                    userId: user._id,
+                    userEmail: user.email,
+                    },
+                    "RANDOM-TOKEN",
+                    { expiresIn: "24h" }
+                );
+                //   return success response
+                res.send(user);
+                /*
+                res.status(200).send({
+                    message: "Login Successful",
+                    name: user.name,
+                    token,
+                });
+                */
+            })
+            .catch((error) => {
+                res.status(400).send({
+                message: "Passwords does not match",
+                error,
+                });
+            })
+        })
+        // catch error if email does not exist
+        .catch((e) => {
+            res.status(404).send({
+            message: "Email not found",
+            e,
+            });
+        });
+
+});
+
+// free endpoint
+app.get("/free-endpoint", (request, response) => {
+    response.json({ message: "You are free to access me anytime" });
+});
+  
+// authentication endpoint
+app.get("/auth-endpoint",auth, (request, response) => {
+    response.json({ message: "You are authorized to access me" });
+});
+
+
+app.post('/cadastroUsuario', async (req,res) =>{
+    const email = req.body.name;
+    const senha = req.body.senha;
+    const user = new UserModel({name:nome,age:idade,email:email,senha:senha});
     try{
-        await food.save();
+        await user.save();
+        console.log(user);
     }catch(err){
         console.log(err);
     }
+
 });
 
 
-app.get('/read',async (req,res)=>{
+/*
+app.post('/login', async (req,res) =>{
+    const email = req.body.name;
+    const senha = req.body.senha;
+
+    UserModel.findOne({
+        username: req.body.username,
+      })
+        .exec((err, user) => {
+          if (err) {
+            res.status(500).send({ message: err });
+            return;
+          }
+          if (!user) {
+            return res.status(404).send({ message: "User Not found." });
+          }
+    
+          var passwordIsValid = bcrypt.compareSync(
+            req.body.password,
+            user.password
+          );
+    
+          if (!passwordIsValid) {
+            return res.status(401).send({ message: "Invalid Password!" });
+          }
+    
+          var token = jwt.sign({ id: user.id }, config.secret, {
+            expiresIn: 86400, // 24 hours
+          });
+    
+          req.session.token = token;
+    
+          res.status(200).send({
+            email: user.email,
+          });
+        });
+       
+});
+
+app.post('/cadastroUsuario', async (req,res) =>{
+    const email = req.body.name;
+    const senha = req.body.senha;
+    const user = new UserModel({name:nome,age:idade,email:email,senha:senha});
     try{
-        const resultado = await FoodModel.find();
-        res.send(resultado);
+        await user.save();
+        console.log(user);
     }catch(err){
-        res.send(err);
+        console.log(err);
     }
+
 });
 
+
+app.post('/logout', async (req,res) =>{
+    const email = req.body.name;
+    const senha = req.body.senha;
+    const user = new UserModel({name:nome,age:idade,email:email,senha:senha});
+    try{
+        await user.save();
+        console.log(user);
+    }catch(err){
+        console.log(err);
+    }
+
+});
+*/
 
 app.get('/userlist',async (req,res)=>{
     try{
@@ -87,7 +317,7 @@ app.get('/tatuador',async (req, res, next)=>{
 });
 */
 
-
+/*
 app.post('/userform/insert', async (req,res) =>{
     const nome = req.body.name;
     const idade = req.body.age;
@@ -125,21 +355,20 @@ app.post('/tatuadorform/insert', async (req,res) =>{
     }
 
 });
-
+*/
 
 
 app.post('/orcamento/insert', async (req,res) =>{
-    const braco = req.body.preco_local_braco;
-    const perna = req.body.preco_local_perna;
-    const torax = req.body.preco_local_torax;
-    const costas = req.body.preco_local_costas;
-    const cabeca = req.body.preco_local_cabeca;
-    const mao = req.body.preco_local_mao;
-    const pe = req.body.preco_local_pe;
+    const clientEmail = req.body.clientEmail;
+    const tatuadorEmail = req.body.tatuadorEmail;
+    const descricao = req.body.descricao;
+    const inspiracao = req.body.inspiracao;
     const tamanho = req.body.tamanho;
+    const local = req.body.local;
     const cor = req.body.cor;
+    const status = req.body.status
 
-    const user = new OrcamentoModel({preco_local_braco:braco,preco_local_perna:perna,preco_local_torax:torax,preco_local_mao:mao,preco_local_pe:pe,preco_local_costas:costas,preco_local_cabeca:cabeca,tamanho:tamanho,cor:cor});
+    const user = new OrcamentoModel({tatuador_email:tatuadorEmail,descricao:descricao,inspiracao:inspiracao,tamanho:tamanho,local:local,cor:cor,cliente_email:clientEmail,status:status});
     try{
         await user.save();
         console.log(user);
@@ -182,13 +411,16 @@ app.post('/categoria/insert', async (req,res) =>{
 });
 
 
-app.post('/orcamento',async (req,res)=>{
-    const name = req.body.name;
-    const tamanho = req.body.tamanho;
-    const cor = req.body.cor;
-    const local = req.body.local;
+app.get('/orcamento',async (req,res)=>{
+    var query = require('url').parse(req.url,true).query;
+    const idOrcamento = query.idOrcamento;
 
-//logica para calcular o orcamento
+    try{
+        const resultado = await OrcamentoModel.find({_id: idOrcamento});   
+        res.send(resultado);
+    }catch(err){
+        res.send(err);
+    }
 
 });
 
@@ -207,12 +439,61 @@ app.get('/categoria', async(req,res)=>{
 });
 
 
+app.get('/orcamentosTatuador', async(req,res)=>{
+    
+    var query = require('url').parse(req.url,true).query;
+    const email = query.tatuadorEmail;
+
+    try{
+        const resultado = await OrcamentoModel.find({"tatuador_email": email});   
+        res.send(resultado);
+    }catch(err){
+        res.send(err);
+    }
+
+});
+
+
+app.get('/orcamentosCliente', async(req,res)=>{
+    
+    var query = require('url').parse(req.url,true).query;
+    const email = query.userEmail;
+
+    try{
+        const resultado = await OrcamentoModel.find({"cliente_email": email});  
+        console.log(resultado); 
+        res.send(resultado);
+    }catch(err){
+        res.send(err);
+    }
+
+});
+
+app.post('/orcamentoAprovado', async(req,res)=>{
+    
+    const preco = req.body.preco;
+    const status = req.body.status;
+    const idOrcamento = req.body.idOrcamento;
+
+    try{
+        const resultado = await OrcamentoModel.updateOne({"_id":idOrcamento},{ $set:{"preco":preco,"status":status}});  
+        res.send(resultado);
+    }catch(err){
+        res.send(err);
+    }
+
+});
+
+
 app.get('/tatuador', async(req,res)=>{
     
     var query = require('url').parse(req.url,true).query;
-    const nome = query.tatuadorName;
+    const email = query.tatuadorEmail;
+    
+    //console.log(email); 
     try{
-        const resultado = await TatuadorModel.find({"name": nome});   
+        const resultado = await TatuadorModel.find({"email": email});   
+        console.log(resultado); 
         res.send(resultado);
     }catch(err){
         res.send(err);
@@ -225,5 +506,6 @@ const PORT = process.env.PORT || 3001;
 app.listen(3001, () => {
   console.log(`Server is running on port ${PORT}`);
 });
+
 
 

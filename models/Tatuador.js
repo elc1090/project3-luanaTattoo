@@ -21,7 +21,6 @@ const TatuadorSchema = new mongoose.Schema({
         type:String,
         required:true,
     },
-    
     categoria:{
         type:String,
         required:true,
@@ -46,12 +45,7 @@ const TatuadorSchema = new mongoose.Schema({
         type:String,
         required:true,
     },
-    /*
-    orcamento_id:{
-        type:Number,
-        required:true,
-    },
-*/
+    
 });
 
 const Tatuador = mongoose.model("tatuador",TatuadorSchema);
