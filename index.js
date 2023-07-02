@@ -1,7 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const cookieSession = require("cookie-session");
 const app = express();
 const FoodModel = require("./models/Food");
 const UserModel = require("./models/Usuario");
@@ -10,7 +9,7 @@ const OrcamentoModel = require("./models/Orcamento");
 const CategoriaModel = require("./models/Categoria");
 
 require('dotenv').config();
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const auth = require("./auth");
 
@@ -18,13 +17,6 @@ app.use(cors());
 
 app.use(express.json());
 
-app.use(
-    cookieSession({
-      name: "luana-session",
-      secret: "COOKIE_SECRET", // should use as secret environment variable
-      httpOnly: true
-    })
-);
 
 mongoose.connect("mongodb+srv://user2:senha@cluster0.kqt2v3y.mongodb.net/crudTest?retryWrites=true&w=majority",
 {
