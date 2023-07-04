@@ -69,7 +69,7 @@ const OrcamentoSingle = ()=>{
                                 
                             }}
                         ></input>
-                        <Link to={`../homeTatuador/${tatuadorEmail}`}><button onClick={handleClick} className='footer-orcamentosingle'><span className='label-footer-orcamentosingle'>Aprovar Orçamento</span></button></Link>
+                        <Link to={`../perfilTatuador/${tatuadorEmail}`}><button onClick={handleClick} className='footer-orcamentosingle'><span className='label-footer-orcamentosingle'>Aprovar Orçamento</span></button></Link>
 
                     </div> 
                 </div> 
