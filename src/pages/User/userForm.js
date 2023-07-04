@@ -100,14 +100,7 @@ const UserForm = ()=>{
                         
                     }}
                     ></input>
-                    <label className='user-label-senha-confirmar'>Confirmar senha</label>
-                    <input  className='user-input-senha-confirmar'
-                        type="text"
-                        onChange={(event)=>{
-                        setSenha(event.target.value);
-                        
-                    }}
-                    ></input>
+                    
                     <Link to={`../home/${email}`}><button onClick={handleSubmit} className='user-footer'><span className='user-label-footer'>Cadastrar</span></button></Link>
 
                 </div>

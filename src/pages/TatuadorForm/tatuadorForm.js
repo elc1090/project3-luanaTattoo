@@ -77,14 +77,7 @@ const TatuadorForm = ()=>{
                             
                         }}
                         ></input>
-                        <label className='tatuador-label-senha-confirmar'>Confirmar senha</label>
-                        <input  className='tatuador-input-senha-confirmar'
-                            type="text"
-                            onChange={(event)=>{
-                            setSenha(event.target.value);
                             
-                        }}
-                        ></input>        
                     </div>
                     <div className='form-body-tatuadorForm'>
                         <label className='label-cidade-tatuadorForm'>Cidade</label>
