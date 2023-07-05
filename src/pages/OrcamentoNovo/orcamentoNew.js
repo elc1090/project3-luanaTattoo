@@ -20,10 +20,10 @@ const OrcamentoNew = ()=>{
     const[local,setLocal] = useState('Braço');
     const[foto,setFoto] = useState('');
     const status = "Pendente";
-
+    const preco = 0;
 
     const handleSubmit = (event) =>{
-        Axios.post("https://tattomarket-api.onrender.com/orcamento/insert",{tatuadorEmail:tatuadorEmail,clientEmail:clientEmail,descricao:descricao,inspiracao:foto,tamanho:tamanho,local:local,cor:cor,status:status});
+        Axios.post("https://tattomarket-api.onrender.com/orcamento/insert",{tatuadorEmail:tatuadorEmail,clientEmail:clientEmail,descricao:descricao,inspiracao:foto,tamanho:tamanho,local:local,cor:cor,status:status,preco:preco});
         //Axios.post("http://localhost:3001/orcamento/insert",{tatuadorEmail:tatuadorEmail,clientEmail:clientEmail,descricao:descricao,inspiracao:foto,tamanho:tamanho,local:local,cor:cor,status:status});
     }
 
