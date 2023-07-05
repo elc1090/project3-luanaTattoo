@@ -49,7 +49,7 @@ export default OrcamentoListCliente;
 
 
 
-function Card({title,descricao,local,tamanho,img,status,type}) {
+function Card({title,descricao,local,tamanho,img,status,type,preco}) {
   return (
   <div className='col-6 bg-transparent '>
     <div className={`card type2-orcamentoList`}>
@@ -58,7 +58,7 @@ function Card({title,descricao,local,tamanho,img,status,type}) {
       <label className='label-descricao-orcamentoList'>{descricao}</label>
       <label className='label-local-orcamentoList'>{local}</label>
       <label className='label-tamanho-orcamentoList'>{tamanho}</label>
-      <div className={`card-footer text-center footer-${type}`}>{status}</div>
+      <div className={`card-footer text-center footer-${type}`}>{`${status}  R$${preco}`}</div>
     </div>
   </div>
   );
@@ -69,7 +69,7 @@ function CardRows({list,type}){
 
   return (<>
     {list.map((card, index) => (
-        <Card key={index} title={card.cliente_email} descricao={card.descricao} local={card.local} tamanho={card.tamanho} img={card.inspiracao} status={card.status} type={type}/>
+        <Card key={index} title={card.tatuador_email} descricao={card.descricao} local={card.local} tamanho={card.tamanho} img={card.inspiracao} status={card.status} type={type} preco={card.preco}/>
     ))}
       
   </>);

@@ -145,11 +145,11 @@ const TatuadorForm = ()=>{
                         }}>
                             <option value="Old School">Old School</option>
                             <option value="Black Work">Black Work</option>
-                            <option value="FIne Line">Fine Line</option>
+                            <option value="Fine Line">Fine Line</option>
                             <option value="Pontilhismo">Pontilhismo</option>
                             <option value="Geometrica">Geometrica</option>
                             <option value="Oriental">Oriental</option>
-                            <option value="Realismo">Realismo</option>
+                            <option value="Realista">Realista</option>
                             <option value="Maori">Maori</option>
                             <option value="Aquarela">Aquarela</option>
                             <option value="Minimalista">Minimalista</option>
