@@ -359,8 +359,9 @@ app.post('/orcamento/insert', async (req,res) =>{
     const local = req.body.local;
     const cor = req.body.cor;
     const status = req.body.status
+    const preco = req.body.preco;
 
-    const user = new OrcamentoModel({tatuador_email:tatuadorEmail,descricao:descricao,inspiracao:inspiracao,tamanho:tamanho,local:local,cor:cor,cliente_email:clientEmail,status:status});
+    const user = new OrcamentoModel({tatuador_email:tatuadorEmail,descricao:descricao,inspiracao:inspiracao,tamanho:tamanho,local:local,cor:cor,cliente_email:clientEmail,status:status,preco:preco});
     try{
         await user.save();
         console.log(user);
