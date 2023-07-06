@@ -71,7 +71,7 @@ const TatuadorForm = ()=>{
                         ></input> 
                         <label className='tatuador-label-senha'>Senha</label>
                         <input  className='tatuador-input-senha'
-                            type="text"
+                            type="password"
                             onChange={(event)=>{
                             setSenha(event.target.value);
                             

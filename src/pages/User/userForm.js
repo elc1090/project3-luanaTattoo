@@ -94,7 +94,7 @@ const UserForm = ()=>{
                     ></input> 
                     <label className='user-label-senha'>Senha</label>
                     <input  className='user-input-senha'
-                        type="text"
+                        type="password"
                         onChange={(event)=>{
                         setSenha(event.target.value);
                         
